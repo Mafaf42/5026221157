@@ -50,23 +50,24 @@ Route::get('/pertemuan8', function () {
     return view('welcome2');
 });
 
-
-// Route::get('/pegawai','app\Http\Controllers\PegawaiDBController@index');
-
-// Route::get('/pegawai/tambah','app\Http\Controllers\PegawaiDBController@tambah');
-
-// Route::post('/pegawai/store','app\Http\Controllers\PegawaiDBController@store');
-
-// Route::post('/pegawai/update','app\Http\Controllers\PegawaiDBController@update');
-
-// Route::get('/pegawai/hapus/{id}','app\Http\Controllers\PegawaiDBController@hapus');
-
 use App\Http\Controllers\PegawaiDBController;
-
 Route::get('/pegawai', [PegawaiDBController::class, 'index']);
 Route::get('/pegawai/tambah', [PegawaiDBController::class, 'tambah']);
 Route::post('/pegawai/store', [PegawaiDBController::class, 'store']);
+Route::get('/pegawai/edit/{id}', [PegawaiDBController::class, 'edit']);
 Route::post('/pegawai/update', [PegawaiDBController::class, 'update']);
-Route::get('/pegawai/hapus/{id}', [PegawaiDBController::class, 'hapus']);
-Route::get('/pegawai/cari', [PegawaiDBController::class, 'cari']);
+Route::get('/pegawai/hapus/{id}',[PegawaiDBController::class, 'hapus']);
+Route::get('/pegawai/cari',[PegawaiDBController::class, 'cari']);
+
+
+use App\Http\Controllers\PensilDBController;
+
+Route::get('/pensil', [PensilDBController::class, 'pensil']);
+Route::get('/pensil/tambah', [PensilDBController::class, 'tambah']);
+Route::post('/pensil/store', [PensilDBController::class, 'store']);
+Route::get('/pensil/edit/{id}', [PensilDBController::class, 'edit']);
+Route::post('/pensil/update', [PensilDBController::class, 'update']);
+Route::get('/pensil/hapus/{id}', [PensilDBController::class, 'hapus']);
+Route::get('/pensil/cari', [PensilDBController::class, 'cari']);
+
 
