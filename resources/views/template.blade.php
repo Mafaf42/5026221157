@@ -10,6 +10,25 @@
   <script src="/js/js/solid.js"></script>
 </head>
 <body>
+  <!-- Navbar -->
+  <nav>
+        <div class="d-flex justify-content-center mt-3">
+
+                <a href="/pegawai"
+                    class="btn {{ request()->is('pegawai*') ? 'btn-primary' : 'btn-secondary' }} me-2">
+                    Data Pegawai
+                </a>
+                <a href="/pensil"
+                    class="btn {{ request()->is('welcome*') ? 'btn-primary' : 'btn-secondary' }} me-2">
+                    Data Pensil
+                </a>
+                <a href="/"
+                    class="btn {{ request()->is('kertashvs*') ? 'btn-primary' : 'btn-secondary' }}">
+                    EAS
+                </a>
+            
+        </div>
+    </nav>
 
 <div class="container mt-4 border">
     <h2>Muhammad Afaf - 5026221157</h2>

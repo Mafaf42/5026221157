@@ -70,4 +70,9 @@ Route::post('/pensil/update', [PensilDBController::class, 'update']);
 Route::get('/pensil/hapus/{id}', [PensilDBController::class, 'hapus']);
 Route::get('/pensil/cari', [PensilDBController::class, 'cari']);
 
+use App\Http\Controllers\PageCounterController;
+
+Route::get('/PageCounter', [PageCounterController::class, 'index']);
+
+
 
