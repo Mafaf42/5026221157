@@ -23,6 +23,7 @@
 
 	<table class="table table-striped table-hover">
 		<tr>
+			<th>KodePensil</th>
 			<th>MerkPensil</th>
 			<th>Stock</th>
 			<th>Tersedia</th>
@@ -30,6 +31,7 @@
 		</tr>
 		@foreach($pensil as $p)
 		<tr>
+			<td>{{ $p->KodePensil}}</td>
 			<td>{{ $p->MerkPensil }}</td>
 			<td>{{ $p->Stock }}</td>
 			<td>{{ $p->Tersedia }}</td>
