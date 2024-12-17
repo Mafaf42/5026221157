@@ -74,5 +74,12 @@ use App\Http\Controllers\PageCounterController;
 
 Route::get('/PageCounter', [PageCounterController::class, 'index']);
 
+use App\Http\Controllers\KaryawanDBController;
+
+Route::get('/karyawan', [KaryawanDBController::class, 'karyawan']);
+Route::get('/karyawan/tambah', [KaryawanDBController::class, 'tambah']);
+Route::post('/karyawan/store', [KaryawanDBController::class, 'store']);
+Route::get('/karyawan/hapus/{id}', [KaryawanDBController::class, 'hapus']);
+
 
 
